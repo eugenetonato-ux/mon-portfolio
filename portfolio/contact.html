@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark" data-title-key="meta.titleContact">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — TONATO Sandro Eugène</title>
+<meta name="description" content="Discutons de votre projet : email, téléphone, WhatsApp ou formulaire de contact.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — TONATO Sandro Eugène">
+<meta property="og:description" content="Vous avez une idée ? Construisons-la ensemble.">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: {
+      colors: { ink:'#0B0D0A', inkSoft:'#14160F', inkLine:'#242820', lime:'#C6F135', limeSoft:'#DFF97A', limeDim:'#8FAE28', paper:'#FAFAF6', paperSoft:'#F1F2E9', paperLine:'#E3E4D6' },
+      fontFamily: { display:['"Space Grotesk"','Inter','sans-serif'], sans:['Inter','system-ui','sans-serif'], mono:['"JetBrains Mono"','ui-monospace','monospace'] },
+    }}
+  }
+</script>
+</head>
+<body data-page="contact" class="bg-paper dark:bg-ink text-ink dark:text-paper font-sans transition-colors duration-300">
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<div id="navbar-root"></div>
+
+<main id="main">
+  <section class="relative overflow-hidden pt-16 pb-16 sm:pt-24 sm:pb-20">
+    <div class="absolute inset-0 mesh-grid pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto px-5 sm:px-8 text-center">
+      <p class="reveal font-mono text-xs uppercase tracking-widest text-lime mb-3" data-i18n="contact.eyebrow">Contact</p>
+      <h1 class="reveal font-display font-bold text-3xl sm:text-5xl mb-5 max-w-3xl mx-auto" data-i18n="contact.title">Vous avez une idée ? Construisons-la ensemble.</h1>
+      <p class="reveal text-lg text-ink/70 dark:text-paper/70 max-w-xl mx-auto" data-i18n="contact.subtitle"></p>
+    </div>
+  </section>
+
+  <section class="pb-24 sm:pb-32">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12">
+
+      <!-- Coordonnées -->
+      <div class="reveal space-y-4" id="contact-info-root" aria-label="Coordonnées">
+        <h2 class="font-mono text-xs uppercase tracking-widest text-lime mb-2" data-i18n="contact.infoTitle">Coordonnées</h2>
+
+        <a id="contact-email-link" href="#" class="flex items-center gap-4 bg-paperSoft dark:bg-inkSoft border border-paperLine dark:border-inkLine rounded-xl p-5 hover:border-lime transition-colors">
+          <span class="w-10 h-10 rounded-full bg-lime/10 text-lime flex items-center justify-center flex-shrink-0"><span id="icon-email" class="w-4 h-4 block"></span></span>
+          <span id="contact-email-text" class="text-sm text-ink/80 dark:text-paper/80 break-all"></span>
+        </a>
+
+        <a id="contact-phone-link" href="#" class="flex items-center gap-4 bg-paperSoft dark:bg-inkSoft border border-paperLine dark:border-inkLine rounded-xl p-5 hover:border-lime transition-colors">
+          <span class="w-10 h-10 rounded-full bg-lime/10 text-lime flex items-center justify-center flex-shrink-0"><span id="icon-phone" class="w-4 h-4 block"></span></span>
+          <span id="contact-phone-text" class="text-sm text-ink/80 dark:text-paper/80"></span>
+        </a>
+
+        <a id="contact-whatsapp-link" href="#" target="_blank" rel="noopener" class="flex items-center gap-4 bg-paperSoft dark:bg-inkSoft border border-paperLine dark:border-inkLine rounded-xl p-5 hover:border-lime transition-colors">
+          <span class="w-10 h-10 rounded-full bg-lime/10 text-lime flex items-center justify-center flex-shrink-0"><span id="icon-whatsapp" class="w-4 h-4 block"></span></span>
+          <span id="contact-whatsapp-text" class="text-sm text-ink/80 dark:text-paper/80"></span>
+        </a>
+
+        <div class="flex items-center gap-4 bg-paperSoft dark:bg-inkSoft border border-paperLine dark:border-inkLine rounded-xl p-5">
+          <span class="w-10 h-10 rounded-full bg-lime/10 text-lime flex items-center justify-center flex-shrink-0"><span id="icon-location" class="w-4 h-4 block"></span></span>
+          <span id="contact-location-text" class="text-sm text-ink/80 dark:text-paper/80"></span>
+        </div>
+
+        <a id="contact-github-link" href="#" target="_blank" rel="noopener" class="flex items-center gap-4 bg-paperSoft dark:bg-inkSoft border border-paperLine dark:border-inkLine rounded-xl p-5 hover:border-lime transition-colors">
+          <span class="w-10 h-10 rounded-full bg-lime/10 text-lime flex items-center justify-center flex-shrink-0"><span id="icon-github" class="w-4 h-4 block"></span></span>
+          <span id="contact-github-text" class="text-sm text-ink/80 dark:text-paper/80">GitHub</span>
+        </a>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="reveal bg-paperSoft dark:bg-inkSoft border border-paperLine dark:border-inkLine rounded-2xl p-6 sm:p-10">
+        <form id="contact-form" novalidate>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+            <div data-field>
+              <label for="field-name" class="block font-mono text-xs uppercase tracking-wider text-ink/60 dark:text-paper/60 mb-2" data-i18n="contact.formName">Nom</label>
+              <input id="field-name" name="from_name" type="text" required minlength="2"
+                class="w-full bg-paper dark:bg-ink border border-paperLine dark:border-inkLine rounded-lg px-4 py-3 text-sm text-ink dark:text-paper focus:border-lime outline-none transition-colors">
+              <p class="field-error text-xs text-red-500 mt-1.5"></p>
+            </div>
+            <div data-field>
+              <label for="field-email" class="block font-mono text-xs uppercase tracking-wider text-ink/60 dark:text-paper/60 mb-2" data-i18n="contact.formEmail">Email</label>
+              <input id="field-email" name="reply_to" type="email" required
+                class="w-full bg-paper dark:bg-ink border border-paperLine dark:border-inkLine rounded-lg px-4 py-3 text-sm text-ink dark:text-paper focus:border-lime outline-none transition-colors">
+              <p class="field-error text-xs text-red-500 mt-1.5"></p>
+            </div>
+          </div>
+
+          <div data-field class="mb-5">
+            <label for="field-subject" class="block font-mono text-xs uppercase tracking-wider text-ink/60 dark:text-paper/60 mb-2" data-i18n="contact.formSubject">Sujet</label>
+            <input id="field-subject" name="subject" type="text" required minlength="3"
+              class="w-full bg-paper dark:bg-ink border border-paperLine dark:border-inkLine rounded-lg px-4 py-3 text-sm text-ink dark:text-paper focus:border-lime outline-none transition-colors">
+            <p class="field-error text-xs text-red-500 mt-1.5"></p>
+          </div>
+
+          <div data-field class="mb-6">
+            <label for="field-message" class="block font-mono text-xs uppercase tracking-wider text-ink/60 dark:text-paper/60 mb-2" data-i18n="contact.formMessage">Message</label>
+            <textarea id="field-message" name="message" rows="5" required minlength="10"
+              class="w-full bg-paper dark:bg-ink border border-paperLine dark:border-inkLine rounded-lg px-4 py-3 text-sm text-ink dark:text-paper focus:border-lime outline-none transition-colors resize-none"></textarea>
+            <p class="field-error text-xs text-red-500 mt-1.5"></p>
+          </div>
+
+          <button id="form-submit" type="submit"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-lime text-ink font-mono text-sm font-medium px-7 py-3.5 rounded-full hover:bg-limeSoft transition-colors disabled:opacity-60">
+            <span data-submit-label data-i18n="contact.formSubmit">Envoyer le message</span>
+          </button>
+
+          <p id="form-status" role="status" aria-live="polite" class="mt-4 text-sm font-medium"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<button id="back-to-top" aria-label="Retour en haut" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-lime text-ink flex items-center justify-center shadow-lg transition-opacity duration-300 opacity-0 z-40">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/data.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/components.js"></script>
+<script src="js/render.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+<script>
+  // Remplit les coordonnées à partir de data.js (source unique, aucune duplication)
+  document.addEventListener('DOMContentLoaded', wireContactInfo);
+  function wireContactInfo() {
+    const p = PORTFOLIO_DATA.personal;
+
+    document.getElementById('contact-email-link').href = `mailto:${p.email}`;
+    document.getElementById('contact-email-text').textContent = p.email;
+
+    document.getElementById('contact-phone-link').href = `tel:${p.phone.replace(/\s+/g, '')}`;
+    document.getElementById('contact-phone-text').textContent = p.phone;
+
+    document.getElementById('contact-whatsapp-link').href = p.whatsappLink;
+    document.getElementById('contact-whatsapp-text').textContent = p.whatsapp;
+
+    document.getElementById('contact-github-link').href = p.github.startsWith('http') ? p.github : '#';
+    document.getElementById('contact-github-text').textContent = p.github;
+
+    const locEl = document.getElementById('contact-location-text');
+    locEl.textContent = '🇧🇯 ' + L(p.location);
+
+    document.getElementById('icon-email').innerHTML = ICONS.mail;
+    document.getElementById('icon-phone').innerHTML = ICONS.phone;
+    document.getElementById('icon-whatsapp').innerHTML = ICONS.whatsapp;
+    document.getElementById('icon-location').innerHTML = ICONS.mapPin;
+    document.getElementById('icon-github').innerHTML = ICONS.github;
+  }
+  document.addEventListener('langchange', wireContactInfo);
+</script>
+</body>
+</html>

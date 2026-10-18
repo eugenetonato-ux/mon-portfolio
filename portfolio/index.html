@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark" data-title-key="meta.titleHome">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TONATO Sandro Eugène — Développeur Web Full-Stack au Bénin</title>
+<meta name="description" content="Développeur web / full-stack basé au Bénin. Applications web, backend, APIs et automatisation, de la conception jusqu'au déploiement.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="index.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="TONATO Sandro Eugène — Développeur Web Full-Stack au Bénin">
+<meta property="og:description" content="Développeur web / full-stack basé au Bénin. Applications web, backend, APIs et automatisation, de la conception jusqu'au déploiement.">
+<meta property="og:locale" content="fr_FR">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B0D0A', inkSoft: '#14160F', inkLine: '#242820',
+          lime: '#C6F135', limeSoft: '#DFF97A', limeDim: '#8FAE28',
+          paper: '#FAFAF6', paperSoft: '#F1F2E9', paperLine: '#E3E4D6',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+</head>
+<body data-page="home" class="bg-paper dark:bg-ink text-ink dark:text-paper font-sans transition-colors duration-300">
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+
+<div id="navbar-root"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32" data-hero-anim>
+    <div class="absolute inset-0 mesh-grid pointer-events-none"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full glow-orb pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
+      <div>
+        <span data-hero-item data-hero-badge class="inline-flex items-center gap-2 font-mono text-xs px-4 py-2 rounded-full border border-lime/40 text-lime mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-lime animate-pulse"></span>
+          <span data-i18n="hero.badge">Disponible pour de nouveaux projets</span>
+        </span>
+
+        <h1 data-hero-item data-hero-title class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight mb-6" data-i18n="hero.title">
+          Je transforme des idées en applications web utiles, modernes et performantes.
+        </h1>
+
+        <p data-hero-item data-hero-subtitle class="text-base sm:text-lg text-ink/65 dark:text-paper/65 max-w-xl mb-4" data-i18n="hero.subtitle">
+          Développeur web / full-stack basé au Bénin, je conçois des applications et des backends qui résolvent de vrais problèmes.
+        </p>
+
+        <p class="font-mono text-sm text-lime/90 mb-10 h-6">
+          <span class="text-ink/40 dark:text-paper/40">&gt;</span>
+          <span data-typed data-typed-text="développeur.buildProject()"></span><span class="cursor-blink">&nbsp;</span>
+        </p>
+
+        <div data-hero-item data-hero-ctas class="flex flex-wrap items-center gap-4">
+          <a href="projects.html" class="inline-flex items-center gap-2 bg-lime text-ink font-mono text-sm font-medium px-6 py-3.5 rounded-full hover:bg-limeSoft transition-colors">
+            <span data-i18n="hero.ctaProjects">Voir mes projets</span>
+            <span id="hero-projects-arrow" class="w-4 h-4 block"></span>
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border border-paperLine dark:border-inkLine font-mono text-sm font-medium px-6 py-3.5 rounded-full hover:border-lime hover:text-lime transition-colors">
+            <span data-i18n="hero.ctaContact">Discutons de votre projet</span>
+          </a>
+        </div>
+        <button type="button" id="hero-cv-btn" class="mt-5 inline-flex items-center gap-2 font-mono text-sm text-ink/60 dark:text-paper/60 hover:text-lime transition-colors">
+          <span id="hero-cv-icon" class="w-4 h-4 block"></span>
+          <span data-i18n="hero.ctaCv">Télécharger mon CV</span>
+        </button>
+      </div>
+
+      <div data-hero-item data-hero-visual class="relative">
+        <div class="relative aspect-square max-w-md mx-auto rounded-3xl border border-paperLine dark:border-inkLine bg-paperSoft dark:bg-inkSoft overflow-hidden">
+          <div class="absolute inset-0 mesh-grid"></div>
+          <div class="absolute inset-6 rounded-2xl bg-ink/95 dark:bg-black/60 backdrop-blur p-6 flex flex-col font-mono text-xs text-lime/90 shadow-2xl">
+            <div class="flex items-center gap-1.5 mb-4">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
+              <span class="ml-2 text-paper/40">portfolio.js</span>
+            </div>
+            <pre class="leading-relaxed whitespace-pre-wrap"><span class="text-paper/40">01</span>  <span class="text-purple-300">const</span> dev = {
+<span class="text-paper/40">02</span>    name: <span class="text-lime">"Sandro Eugène"</span>,
+<span class="text-paper/40">03</span>    role: <span class="text-lime">"Full-Stack Dev"</span>,
+<span class="text-paper/40">04</span>    base: <span class="text-lime">"Bénin 🇧🇯"</span>,
+<span class="text-paper/40">05</span>    stack: [<span class="text-lime">"Django"</span>, <span class="text-lime">"JS"</span>],
+<span class="text-paper/40">06</span>  };
+<span class="text-paper/40">07</span>
+<span class="text-paper/40">08</span>  dev.<span class="text-blue-300">ship</span>(idea);</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="border-y border-paperLine dark:border-inkLine bg-paperSoft/60 dark:bg-inkSoft/40">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 grid grid-cols-2 lg:grid-cols-4 gap-8" id="stats-grid"></div>
+  </section>
+
+  <!-- ============ ABOUT PREVIEW ============ -->
+  <section class="py-24 sm:py-32">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal">
+        <p class="font-mono text-xs uppercase tracking-widest text-lime mb-3" data-i18n="about.eyebrow">À propos</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mb-6" data-i18n="about.title">Qui suis-je ?</h2>
+        <p class="text-ink/70 dark:text-paper/70 leading-relaxed mb-4" data-i18n="about.intro"></p>
+        <p class="text-ink/70 dark:text-paper/70 leading-relaxed mb-8" data-i18n="about.approach"></p>
+        <a href="about.html" class="inline-flex items-center gap-2 font-mono text-sm text-lime hover:gap-3 transition-all">
+          <span data-i18n="about.viewMore">En savoir plus sur mon parcours</span>
+          <span class="w-4 h-4 block" id="about-arrow"></span>
+        </a>
+      </div>
+      <div class="reveal grid grid-cols-2 gap-4">
+        <div class="rounded-2xl border border-paperLine dark:border-inkLine p-6 bg-paperSoft dark:bg-inkSoft">
+          <p class="font-mono text-3xl text-lime mb-1">🇧🇯</p>
+          <p class="text-sm text-ink/60 dark:text-paper/60" data-i18n="personal.location">Bénin</p>
+        </div>
+        <div class="rounded-2xl border border-paperLine dark:border-inkLine p-6 bg-paperSoft dark:bg-inkSoft mt-8">
+          <p class="font-mono text-3xl text-lime mb-1">&lt;/&gt;</p>
+          <p class="text-sm text-ink/60 dark:text-paper/60" data-i18n="hero.role"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES PREVIEW ============ -->
+  <section class="py-24 sm:py-32 border-t border-paperLine dark:border-inkLine">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14 reveal">
+        <div>
+          <p class="font-mono text-xs uppercase tracking-widest text-lime mb-3" data-i18n="services.eyebrow">Services</p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl max-w-lg" data-i18n="services.title">Ce que je peux faire pour vous</h2>
+        </div>
+        <a href="services.html" class="inline-flex items-center gap-2 font-mono text-sm text-ink/70 dark:text-paper/70 hover:text-lime transition-colors" data-i18n="services.viewAll">Voir tous les services</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="services-preview-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="py-24 sm:py-32 bg-paperSoft/60 dark:bg-inkSoft/40 border-y border-paperLine dark:border-inkLine">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="max-w-xl mb-16 reveal">
+        <p class="font-mono text-xs uppercase tracking-widest text-lime mb-3" data-i18n="process.eyebrow">Méthode</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4" data-i18n="process.title">Comment je travaille</h2>
+        <p class="text-ink/65 dark:text-paper/65" data-i18n="process.subtitle"></p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10" id="process-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ WHY WORK WITH ME ============ -->
+  <section class="py-24 sm:py-32">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-xl mx-auto mb-14 reveal">
+        <p class="font-mono text-xs uppercase tracking-widest text-lime mb-3" data-i18n="values.eyebrow">Pourquoi moi</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl" data-i18n="values.title">Pourquoi travailler avec moi</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="values-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS PREVIEW ============ -->
+  <section class="py-24 sm:py-32 border-t border-paperLine dark:border-inkLine">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14 reveal">
+        <div>
+          <p class="font-mono text-xs uppercase tracking-widest text-lime mb-3" data-i18n="projects.eyebrow">Réalisations</p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl max-w-lg mb-2" data-i18n="projects.title">Mes réalisations</h2>
+          <p class="text-ink/65 dark:text-paper/65 max-w-md" data-i18n="projects.subtitle"></p>
+        </div>
+        <a href="projects.html" class="inline-flex items-center gap-2 font-mono text-sm text-ink/70 dark:text-paper/70 hover:text-lime transition-colors" data-i18n="projects.viewAll">Voir tous les projets</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-preview-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="py-24 sm:py-32">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="reveal relative rounded-3xl bg-ink dark:bg-inkSoft border border-inkLine overflow-hidden px-8 py-16 sm:px-16 sm:py-20 text-center">
+        <div class="absolute inset-0 mesh-grid opacity-60"></div>
+        <div class="relative">
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-paper mb-4" data-i18n="ctaFinal.title">Un projet en tête ?</h2>
+          <p class="text-paper/60 max-w-md mx-auto mb-10" data-i18n="ctaFinal.subtitle">Transformons votre idée en une solution concrète.</p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="contact.html" class="bg-lime text-ink font-mono text-sm font-medium px-7 py-3.5 rounded-full hover:bg-limeSoft transition-colors" data-i18n="ctaFinal.ctaStart">Démarrer un projet</a>
+            <a href="projects.html" class="border border-paper/20 text-paper font-mono text-sm font-medium px-7 py-3.5 rounded-full hover:border-lime hover:text-lime transition-colors" data-i18n="ctaFinal.ctaProjects">Voir mes réalisations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-root"></div>
+
+<button id="back-to-top" aria-label="Retour en haut" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-lime text-ink flex items-center justify-center shadow-lg transition-opacity duration-300 opacity-0 z-40">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/data.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="js/components.js"></script>
+<script src="js/render.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Petites finitions spécifiques à la page d'accueil (icônes, CV, rôle traduit)
+  document.addEventListener('DOMContentLoaded', wireHome);
+  document.addEventListener('langchange', wireHome);
+  function wireHome() {
+    const aboutArrow = document.getElementById('about-arrow');
+    if (aboutArrow) aboutArrow.innerHTML = ICONS.arrowRight;
+
+    const heroArrow = document.getElementById('hero-projects-arrow');
+    if (heroArrow) heroArrow.innerHTML = ICONS.arrowRight;
+
+    const cvIcon = document.getElementById('hero-cv-icon');
+    if (cvIcon) cvIcon.innerHTML = ICONS.download;
+
+    const cvBtn = document.getElementById('hero-cv-btn');
+    if (cvBtn) {
+      cvBtn.onclick = (e) => {
+        e.preventDefault();
+        const lang = typeof getCurrentLang === 'function' ? getCurrentLang() : 'fr';
+        const cvData = PORTFOLIO_DATA.personal.cvUrl;
+        const cvUrl = (typeof cvData === 'object' && cvData !== null)
+          ? (cvData[lang] || cvData.fr || cvData.en)
+          : cvData;
+
+        if (!cvUrl) {
+          alert(TRANSLATIONS[lang].hero.cvUnavailable);
+        } else {
+          window.open(cvUrl, '_blank');
+        }
+      };
+    }
+
+    const roleEl = document.querySelector('[data-i18n="hero.role"]');
+    if (roleEl) roleEl.textContent = L(PORTFOLIO_DATA.personal.role);
+
+    const locEl = document.querySelector('[data-i18n="personal.location"]');
+    if (locEl) locEl.textContent = '🇧🇯 ' + L(PORTFOLIO_DATA.personal.location);
+  }
+</script>
+</body>
+</html>

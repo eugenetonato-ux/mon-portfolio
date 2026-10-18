@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark" data-title-key="meta.titleServices">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — TONATO Sandro Eugène</title>
+<meta name="description" content="Développement web, applications métier, backend & APIs, bases de données, automatisation et déploiement.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="services.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Services — TONATO Sandro Eugène">
+<meta property="og:description" content="Développement web, applications métier, backend & APIs, bases de données, automatisation et déploiement.">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: {
+      colors: { ink:'#0B0D0A', inkSoft:'#14160F', inkLine:'#242820', lime:'#C6F135', limeSoft:'#DFF97A', limeDim:'#8FAE28', paper:'#FAFAF6', paperSoft:'#F1F2E9', paperLine:'#E3E4D6' },
+      fontFamily: { display:['"Space Grotesk"','Inter','sans-serif'], sans:['Inter','system-ui','sans-serif'], mono:['"JetBrains Mono"','ui-monospace','monospace'] },
+    }}
+  }
+</script>
+</head>
+<body data-page="services" class="bg-paper dark:bg-ink text-ink dark:text-paper font-sans transition-colors duration-300">
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<div id="navbar-root"></div>
+
+<main id="main">
+  <section class="relative overflow-hidden pt-16 pb-20 sm:pt-24 sm:pb-24 border-b border-paperLine dark:border-inkLine">
+    <div class="absolute inset-0 mesh-grid pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto px-5 sm:px-8">
+      <p class="reveal font-mono text-xs uppercase tracking-widest text-lime mb-3" data-i18n="services.eyebrow">Services</p>
+      <h1 class="reveal font-display font-bold text-4xl sm:text-6xl mb-6" data-i18n="services.title">Ce que je peux faire pour vous</h1>
+      <p class="reveal text-lg text-ink/70 dark:text-paper/70 max-w-2xl leading-relaxed" data-i18n="services.subtitle"></p>
+    </div>
+  </section>
+
+  <section class="py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="services-full-grid"></div>
+  </section>
+
+  <section class="py-20 sm:py-24 border-t border-paperLine dark:border-inkLine text-center">
+    <div class="max-w-2xl mx-auto px-5 sm:px-8 reveal">
+      <h2 class="font-display font-bold text-3xl mb-4" data-i18n="ctaFinal.title">Un projet en tête ?</h2>
+      <p class="text-ink/65 dark:text-paper/65 mb-8" data-i18n="ctaFinal.subtitle"></p>
+      <a href="contact.html" class="inline-flex bg-lime text-ink font-mono text-sm font-medium px-7 py-3.5 rounded-full hover:bg-limeSoft transition-colors" data-i18n="ctaFinal.ctaStart">Démarrer un projet</a>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<button id="back-to-top" aria-label="Retour en haut" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-lime text-ink flex items-center justify-center shadow-lg transition-opacity duration-300 opacity-0 z-40">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/data.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="js/components.js"></script>
+<script src="js/render.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

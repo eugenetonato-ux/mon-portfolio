@@ -1,0 +1,144 @@
+/* =========================================================
+   TONATO Sandro Eugène — Portfolio
+   Design system: dark-first "terminal premium" theme
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, html {
+  color-scheme: dark;
+}
+
+* { scroll-behavior: smooth; }
+
+body{
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display{
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.font-mono{
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* ---------- Inline SVG icons: fill their sized wrapper span/div ---------- */
+svg{ width: 100%; height: 100%; display: block; }
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: transparent; }
+::-webkit-scrollbar-thumb{ background: #C6F135; border-radius: 999px; opacity: .5; }
+
+/* ---------- Focus visibility (accessibility) ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible{
+  outline: 2px solid #C6F135;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Scroll reveal base states (Anime.js hooks) ---------- */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+}
+.reveal.reveal-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity: 1; transform: none; }
+}
+
+/* ---------- Hero background: subtle circuit / grid mesh ---------- */
+.mesh-grid{
+  background-image:
+    linear-gradient(to right, rgba(198,241,53,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(198,241,53,0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 60% 30%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 60% 30%, black 30%, transparent 75%);
+}
+
+.glow-orb{
+  background: radial-gradient(circle, rgba(198,241,53,0.35) 0%, rgba(198,241,53,0) 70%);
+  filter: blur(10px);
+}
+
+/* ---------- Card hover lift ---------- */
+.lift{ transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s ease, box-shadow .35s ease; }
+.lift:hover{ transform: translateY(-6px); }
+
+/* ---------- Nav link underline ---------- */
+.nav-link{ position: relative; }
+.nav-link::after{
+  content:"";
+  position:absolute; left:0; bottom:-4px;
+  width:0; height:1.5px;
+  background:#C6F135;
+  transition: width .3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after{ width:100%; }
+
+/* ---------- Mobile menu ---------- */
+.mobile-menu{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+.mobile-menu.open{ max-height: 640px; }
+
+/* ---------- Marquee (services strip / tech ticker) ---------- */
+@keyframes marquee{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+.marquee-track{
+  display:flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{ animation: none; }
+}
+
+/* ---------- Blinking cursor for hero typed line ---------- */
+.cursor-blink{
+  display:inline-block;
+  width: 2px;
+  background: #C6F135;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink{ 50%{ opacity: 0; } }
+
+/* ---------- Skip link ---------- */
+.skip-link{
+  position:absolute; left: -9999px; top: 0;
+  background:#C6F135; color:#0B0D0A; padding: .6rem 1rem; z-index: 100;
+  font-family:'JetBrains Mono', monospace; font-size:.85rem;
+}
+.skip-link:focus{ left: 1rem; top: 1rem; border-radius: 6px; }
+
+/* ---------- Form states ---------- */
+.field-error{ display:none; }
+.field-invalid .field-error{ display:block; }
+.field-invalid input,
+.field-invalid textarea{ border-color:#e5544a !important; }
