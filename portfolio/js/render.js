@@ -244,7 +244,6 @@ function renderProjectDetail() {
   } else if (project.url) {
     links.push(`<a href="${project.url}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-lime text-ink font-mono text-sm px-5 py-2.5 rounded-full font-medium shadow-sm hover:shadow-md transition-all">${TRANSLATIONS[lang].projects.viewProject}<span class="w-4 h-4 block">${ICONS.arrowUpRight}</span></a>`);
   }
-  if (project.github) links.push(`<a href="${project.github}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-paperLine dark:border-inkLine font-mono text-sm px-5 py-2.5 rounded-full text-ink dark:text-paper font-medium hover:border-lime transition-all">${TRANSLATIONS[lang].projects.viewCode}<span class="w-4 h-4 block">${ICONS.github}</span></a>`);
 
   root.innerHTML = `
     <a href="projects.html" class="reveal inline-flex items-center gap-2 font-mono text-sm text-ink/60 dark:text-paper/60 hover:text-lime mb-8">

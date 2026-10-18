@@ -232,7 +232,6 @@ const PORTFOLIO_DATA = {
       technologies: ["Python", "Django", "JavaScript", "HTML5", "CSS3", "FontAwesome", "PythonAnywhere"],
       category: "Web",
       url: "https://deliceexpress.pythonanywhere.com",
-      github: "https://github.com/eugenetonato-ux",
       image: "assets/projects/delice-1.jpg",
       gallery: [
         "assets/projects/delice-1.jpg",
@@ -273,7 +272,6 @@ const PORTFOLIO_DATA = {
       technologies: ["Python", "Django", "PostgreSQL", "HTML5", "CSS3", "Git"],
       category: "Web",
       url: "https://archivex.online",
-      github: "https://github.com/eugenetonato-ux",
       image: "assets/projects/archivex-1.jpg",
       gallery: [
         "assets/projects/archivex-1.jpg",
@@ -313,7 +311,6 @@ const PORTFOLIO_DATA = {
       technologies: ["Python", "Django", "PostgreSQL", "JavaScript", "HTML5", "CSS3", "PythonAnywhere"],
       category: "Web",
       url: "https://immolink.pythonanywhere.com",
-      github: "https://github.com/eugenetonato-ux",
       image: "assets/projects/immolink-1.jpg",
       gallery: [
         "assets/projects/immolink-1.jpg",
@@ -353,7 +350,6 @@ const PORTFOLIO_DATA = {
       technologies: ["Python", "Django", "MySQL", "Bootstrap", "JavaScript"],
       category: "Backend",
       url: "",
-      github: "https://github.com/eugenetonato-ux",
       image: ""
     },
     {
@@ -388,7 +384,6 @@ const PORTFOLIO_DATA = {
       technologies: ["Ionic", "Angular", "Firebase", "TypeScript", "Android Studio"],
       category: "Mobile",
       url: "",
-      github: "https://github.com/eugenetonato-ux",
       image: "assets/projects/cookly-1.jpg",
       gallery: [
         "assets/projects/cookly-1.jpg",
@@ -428,7 +423,6 @@ const PORTFOLIO_DATA = {
       technologies: ["Python", "Django", "PostgreSQL", "APIs Paiement", "JavaScript"],
       category: "Web",
       url: "",
-      github: "https://github.com/eugenetonato-ux",
       image: ""
     },
     {
@@ -467,7 +461,6 @@ const PORTFOLIO_DATA = {
         { label: { fr: "Visiter Aurelia Hotel", en: "Visit Aurelia Hotel" }, url: "https://hotel-aurelia.web.app" },
         { label: { fr: "Visiter Mel House", en: "Visit Mel House" }, url: "https://melhouse.netlify.app" }
       ],
-      github: "https://github.com/eugenetonato-ux",
       image: "assets/projects/landing-1.jpg",
       gallery: [
         "assets/projects/landing-1.jpg",
