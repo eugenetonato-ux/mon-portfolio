@@ -106,18 +106,133 @@ select:focus-visible,
 }
 .mobile-menu.open{ max-height: 640px; }
 
-/* ---------- Marquee (services strip / tech ticker) ---------- */
-@keyframes marquee{
-  from{ transform: translateX(0); }
-  to{ transform: translateX(-50%); }
+/* ---------- Marquee ticker banner ("la bande qui défile") ---------- */
+.marquee-wrap {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px 0;
+  overflow: hidden;
+  background: rgba(18, 23, 34, 0.65);
+  backdrop-filter: blur(12px);
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
-.marquee-track{
-  display:flex;
+.marquee {
+  display: flex;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  gap: 56px;
+  animation: marquee 32s linear infinite;
 }
-@media (prefers-reduced-motion: reduce){
-  .marquee-track{ animation: none; }
+.marquee-wrap:hover .marquee {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(243, 244, 246, 0.75);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  transition: color 0.3s ease;
+}
+.marquee-item:hover {
+  color: #C6F135;
+}
+.marquee-item .sq {
+  width: 7px;
+  height: 7px;
+  background: #C6F135;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(198, 241, 53, 0.6);
+  display: inline-block;
+  flex-shrink: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none; }
+}
+
+/* ---------- Custom Interactive Mouse Cursor (Desktop) ---------- */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #C6F135;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.25s ease,
+              background-color 0.3s ease;
+  box-shadow: 0 0 12px rgba(198, 241, 53, 0.8);
+  display: none;
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(198, 241, 53, 0.45);
+  background: rgba(198, 241, 53, 0.06);
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.3s ease,
+              background-color 0.3s ease,
+              opacity 0.25s ease;
+  display: none;
+}
+
+/* Hover state on interactive elements */
+.cursor-dot.is-hover {
+  width: 22px;
+  height: 22px;
+  background: #C6F135;
+  box-shadow: 0 0 24px rgba(198, 241, 53, 0.95);
+  mix-blend-mode: screen;
+}
+
+.cursor-follower.is-hover {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(198, 241, 53, 0.85);
+  background: rgba(198, 241, 53, 0.16);
+  box-shadow: 0 0 30px rgba(198, 241, 53, 0.4);
+}
+
+.cursor-dot.is-down {
+  transform: translate(-50%, -50%) scale(0.65);
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+  .cursor-dot, .cursor-follower {
+    display: block;
+  }
+}
+
+/* ---------- 3D Card Tilt & Glare ---------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
 }
 
 /* ---------- Blinking cursor for hero typed line ---------- */

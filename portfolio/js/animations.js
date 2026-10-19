@@ -136,10 +136,126 @@ function initCardHovers() {
   });
 }
 
+/* ---------- Custom Interactive Mouse Cursor (Desktop) ---------- */
+function initCustomCursor() {
+  if (prefersReducedMotion() || window.innerWidth < 1024 || !window.matchMedia('(hover: hover)').matches) return;
+
+  let dot = document.querySelector('.cursor-dot');
+  let follower = document.querySelector('.cursor-follower');
+
+  if (!dot) {
+    dot = document.createElement('div');
+    dot.className = 'cursor-dot';
+    document.body.appendChild(dot);
+  }
+  if (!follower) {
+    follower = document.createElement('div');
+    follower.className = 'cursor-follower';
+    document.body.appendChild(follower);
+  }
+
+  let mouseX = -100, mouseY = -100;
+  let dotX = -100, dotY = -100;
+  let folX = -100, folY = -100;
+  let isVisible = false;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!isVisible) {
+      isVisible = true;
+      dot.style.opacity = '1';
+      follower.style.opacity = '1';
+    }
+  });
+
+  window.addEventListener('mouseleave', () => {
+    isVisible = false;
+    dot.style.opacity = '0';
+    follower.style.opacity = '0';
+  });
+
+  window.addEventListener('mousedown', () => {
+    dot.classList.add('is-down');
+    follower.classList.add('is-down');
+  });
+
+  window.addEventListener('mouseup', () => {
+    dot.classList.remove('is-down');
+    follower.classList.remove('is-down');
+  });
+
+  const onEnter = () => {
+    dot.classList.add('is-hover');
+    follower.classList.add('is-hover');
+  };
+
+  const onLeave = () => {
+    dot.classList.remove('is-hover');
+    follower.classList.remove('is-hover');
+  };
+
+  const bindHover = () => {
+    const targets = document.querySelectorAll('a, button, input, select, textarea, .lift, article, [role="button"], [data-cursor-hover], .marquee-item');
+    targets.forEach((el) => {
+      el.removeEventListener('mouseenter', onEnter);
+      el.removeEventListener('mouseleave', onLeave);
+      el.addEventListener('mouseenter', onEnter);
+      el.addEventListener('mouseleave', onLeave);
+    });
+  };
+
+  bindHover();
+  document.addEventListener('renderDone', bindHover);
+  setTimeout(bindHover, 600);
+  setTimeout(bindHover, 1500);
+
+  const loop = () => {
+    dotX += (mouseX - dotX) * 0.45;
+    dotY += (mouseY - dotY) * 0.45;
+    dot.style.left = `${dotX}px`;
+    dot.style.top = `${dotY}px`;
+
+    folX += (mouseX - folX) * 0.16;
+    folY += (mouseY - folY) * 0.16;
+    follower.style.left = `${folX}px`;
+    follower.style.top = `${folY}px`;
+
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+}
+
+/* ---------- 3D Perspective Card Tilt on Mouse Move ---------- */
+function initHeroCardTilt() {
+  if (prefersReducedMotion() || window.innerWidth < 1024) return;
+  const cards = document.querySelectorAll('.tilt-card');
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -12;
+      const rotateY = ((x - centerX) / centerX) * 12;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initHeroEntrance();
   initTypedLine();
   initScrollReveal();
   initStatCounters();
   initCardHovers();
+  initCustomCursor();
+  initHeroCardTilt();
 });

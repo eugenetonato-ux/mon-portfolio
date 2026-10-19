@@ -41,8 +41,9 @@ function renderNavbar() {
   root.innerHTML = `
     <header class="sticky top-0 z-50 bg-ink/85 backdrop-blur-md border-b border-inkLine">
       <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between" aria-label="Navigation principale">
-        <a href="index.html" class="font-display font-bold text-xl tracking-tight text-paper flex items-center gap-1" aria-label="TONATO Sandro Eugène — Accueil">
-          <span class="font-mono text-lime">&lt;</span>SE<span class="font-mono text-lime">/&gt;</span>
+        <a href="index.html" class="font-display font-bold text-lg sm:text-xl tracking-tight text-paper flex items-center gap-2.5 group" aria-label="TONATO Sandro Eugène — Accueil">
+          <span class="w-2.5 h-2.5 rounded-full bg-lime animate-pulse inline-block shadow-[0_0_8px_#C6F135]"></span>
+          <span>Sandro<span class="text-lime">.dev</span></span>
         </a>
 
         <div class="hidden lg:flex items-center gap-8">
@@ -106,8 +107,9 @@ function renderFooter() {
     <footer class="bg-ink text-paper border-t border-inkLine">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <a href="index.html" class="font-display font-bold text-xl flex items-center gap-1 mb-4">
-            <span class="font-mono text-lime">&lt;</span>SE<span class="font-mono text-lime">/&gt;</span>
+          <a href="index.html" class="font-display font-bold text-xl flex items-center gap-2.5 mb-4 group">
+            <span class="w-2.5 h-2.5 rounded-full bg-lime shadow-[0_0_8px_#C6F135]"></span>
+            <span>Sandro<span class="text-lime">.dev</span></span>
           </a>
           <p class="text-sm text-paper/60 leading-relaxed max-w-xs" data-i18n="footer.description"></p>
         </div>

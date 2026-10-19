@@ -27,13 +27,13 @@ const TRANSLATIONS = {
     },
     hero: {
       badge: "Disponible pour de nouveaux projets",
-      title: "Je transforme des idées en applications web & mobiles utiles, modernes et performantes.",
-      subtitle: "Développeur full-stack basé à Cotonou (Bénin), je conçois des applications, backends et apps mobiles qui résolvent de vrais problèmes — de la première idée jusqu'à la mise en production.",
+      title: "Bonjour, je suis Sandro TONATO — je conçois des solutions web & mobiles performantes.",
+      subtitle: "Développeur Full-Stack basé à Cotonou, Bénin. Je conçois des applications web complètes, des backends robustes et des applications mobiles, de l'architecture initiale jusqu'au déploiement en production.",
       ctaProjects: "Voir mes projets",
       ctaContact: "Discutons de votre projet",
       ctaCv: "Télécharger mon CV",
       cvUnavailable: "Le fichier CV n'est pas encore déposé dans le dossier.",
-      typed: "développeur.buildProject()"
+      typed: "sandro.concoitDesSolutions()"
     },
     stats: {
       projects: "Projets réalisés",
@@ -174,13 +174,13 @@ const TRANSLATIONS = {
     },
     hero: {
       badge: "Available for new projects",
-      title: "I turn ideas into useful, modern and high-performing web & mobile applications.",
-      subtitle: "Full-stack developer based in Cotonou (Benin), I build web applications, backends and mobile apps that solve real problems — from the first idea to production.",
+      title: "Hello, I'm Sandro TONATO — I build high-performance web & mobile solutions.",
+      subtitle: "Full-Stack Developer based in Cotonou, Benin. I build end-to-end web applications, robust backends, and mobile apps, from initial architecture to production deployment.",
       ctaProjects: "View my projects",
       ctaContact: "Let's talk about your project",
       ctaCv: "Download my CV",
       cvUnavailable: "The CV file is not uploaded yet.",
-      typed: "developer.buildProject()"
+      typed: "sandro.buildImpactfulSolutions()"
     },
     stats: {
       projects: "Projects delivered",
