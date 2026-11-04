@@ -140,7 +140,7 @@ function projectCardHTML(p) {
     <article class="reveal lift bg-paperSoft dark:bg-inkSoft border border-paperLine dark:border-inkLine rounded-2xl overflow-hidden flex flex-col">
       <a href="project-detail.html?id=${p.id}" class="block aspect-[16/10] bg-ink/90 dark:bg-black/40 relative overflow-hidden group">
         ${p.image ? `
-          <img src="${p.image}" alt="${L(p.title)}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          <img src="${p.image}" alt="${L(p.title)}" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
         ` : `
           <div class="absolute inset-0 mesh-grid opacity-70"></div>
@@ -257,7 +257,7 @@ function renderProjectDetail() {
 
     <div class="reveal aspect-[16/8] rounded-2xl bg-ink dark:bg-black/40 border border-paperLine dark:border-inkLine relative overflow-hidden mb-12">
       ${project.image ? `
-        <img src="${project.image}" alt="${L(project.title)}" class="w-full h-full object-cover object-top">
+        <img src="${project.image}" alt="${L(project.title)}" loading="lazy" decoding="async" class="w-full h-full object-cover object-top">
       ` : `
         <div class="absolute inset-0 mesh-grid opacity-70"></div>
       `}
@@ -306,7 +306,7 @@ function renderProjectDetail() {
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           ${project.gallery.map((img, i) => `
             <a href="${img}" target="_blank" rel="noopener" class="group block aspect-[16/10] rounded-2xl overflow-hidden border border-paperLine dark:border-inkLine bg-paperSoft dark:bg-inkSoft relative shadow-sm hover:shadow-xl transition-all">
-              <img src="${img}" alt="${L(project.title)} aperçu ${i + 1}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <img src="${img}" alt="${L(project.title)} aperçu ${i + 1}" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span class="w-10 h-10 rounded-full bg-lime text-ink flex items-center justify-center font-bold shadow-md"><span class="w-4 h-4 block">${ICONS.arrowUpRight}</span></span>
               </div>
