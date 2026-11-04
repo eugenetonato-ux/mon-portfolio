@@ -7,9 +7,9 @@
  * Tant qu'elles contiennent "À_RENSEIGNER", le formulaire affiche un message
  * clair au lieu de prétendre envoyer l'email.
  */
-const EMAILJS_PUBLIC_KEY = 'À_RENSEIGNER';
-const EMAILJS_SERVICE_ID = 'À_RENSEIGNER';
-const EMAILJS_TEMPLATE_ID = 'À_RENSEIGNER';
+const EMAILJS_PUBLIC_KEY = 'XLyiusxt9oKhTIurT';
+const EMAILJS_SERVICE_ID = 'service_dqm41cb';
+const EMAILJS_TEMPLATE_ID = 'template_t9g5y9j';
 
 function isEmailjsConfigured() {
   return ![EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID].includes('À_RENSEIGNER');
@@ -89,7 +89,8 @@ function initContactForm() {
         statusEl.className = 'mt-4 text-sm font-medium text-lime';
         form.reset();
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error('EmailJS error:', err);
         statusEl.textContent = dict.formError;
         statusEl.className = 'mt-4 text-sm font-medium text-red-500';
       })
